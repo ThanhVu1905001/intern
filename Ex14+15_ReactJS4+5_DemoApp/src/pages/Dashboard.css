@@ -1,0 +1,62 @@
+/* dashboard.css */
+
+/* Main container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Heading style */
+  .dashboard-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Logout button */
+  .logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  /* Link style */
+  .dashboard-link {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .dashboard-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Category list */
+  .category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .category-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .category-item {
+    margin-bottom: 10px;
+  }
+  

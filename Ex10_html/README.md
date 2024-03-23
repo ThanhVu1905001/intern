@@ -1,0 +1,1 @@
+Đây là giao diện của Citi-Bike, đã sử lý tương đối responsive, khung "Thêm vào giỏ hàng" được kích hoạt kjhi ấn vào sản phẩm đầu tiên trong trang, khung quickview thì là sản phẩm thứ 2 (đây chỉ là js tạm thời để review).

@@ -1,0 +1,45 @@
+/* createCategoryPage.css */
+
+/* Main container */
+.create-category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Heading style */
+  .create-category-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Logout button */
+  .logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  /* Link style */
+  .back-link {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Other styles... */
+  

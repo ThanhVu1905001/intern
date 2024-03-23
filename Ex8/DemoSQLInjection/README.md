@@ -1,0 +1,2 @@
+# Em tạo ra một database đơn giản mới để thử trên thao tác search
+Em đã tạo ra 2 hàm SearchCategoryUnSafe là thể hiện việc tìm kiếm không an toàn do nối chuỗi trực tiếp vào câu lệnh truy vấn, đồng thời đề xuất cách khắc phục thông qua việc thêm hàm SearchCategorySafe để hạn chế SQL Injection bằng việc sử dụng placeholder ? để thực hiện truy vấn.

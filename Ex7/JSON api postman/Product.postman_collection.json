@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "dcb4af6b-7d13-47a8-9ae1-3154fdbe2377",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29778486"
+	},
+	"item": [
+		{
+			"name": "in tất cả",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/api/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "tìm bản ghi theo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "thêm bản ghi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productCode\": \"P002\",\r\n    \"categoryCode\": \"C001\",\r\n    \"warehouseCode\": \"W001\",\r\n    \"name\": \"Product 1\",\r\n    \"price\": 10.99,\r\n    \"productDescription\": \"Description for Product 1\",\r\n    \"imagePath\": \"path_to_image1.jpg\",\r\n    \"quantityInStock\": 100,\r\n    \"quantitySold\": 0,\r\n    \"createdDate\": \"2023-11-01T09:24:25.000+00:00\",\r\n    \"updatedDate\": \"2023-11-01T09:24:25.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/api/products/"
+			},
+			"response": []
+		},
+		{
+			"name": "cập nhật bản ghi theo id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"productCode\": \"P001\",\r\n    \"categoryCode\": \"C001\",\r\n    \"warehouseCode\": \"W001\",\r\n    \"name\": \"Product 1\",\r\n    \"price\": 10.99,\r\n    \"productDescription\": \"Description for Product 1\",\r\n    \"imagePath\": \"path_to_image1.jpg\",\r\n    \"quantityInStock\": 100,\r\n    \"quantitySold\": 0,\r\n    \"createdDate\": \"2023-11-01T09:24:25.000+00:00\",\r\n    \"updatedDate\": \"2023-11-01T09:24:25.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "xóa bản ghi theo id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8088/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "in ra top 10 sản phẩm bán chạy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/api/products/top-selling?limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"products",
+						"top-selling"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lọc sản phẩm theo tên, có phân trang",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/api/products?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

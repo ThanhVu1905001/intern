@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "309739b9-f853-4122-9873-9e3df2b841ac",
+		"name": "Category",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29778486"
+	},
+	"item": [
+		{
+			"name": "in ra tất cả",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/api/categories/"
+			},
+			"response": []
+		},
+		{
+			"name": "tìm bản ghi theo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/api/categories/1"
+			},
+			"response": []
+		},
+		{
+			"name": "thêm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"categoryCode\": \"C002\",\r\n    \"name\": \"Category 1\",\r\n    \"categoryDescription\": \"Description for Category 1\",\r\n    \"createdDate\": \"2023-11-01T09:23:40.000+00:00\",\r\n    \"updatedDate\": \"2023-11-01T09:23:40.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/api/categories/"
+			},
+			"response": []
+		},
+		{
+			"name": "sửa bản ghi theo id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryCode\": \"C001\",\r\n    \"name\": \"Category 1\",\r\n    \"categoryDescription\": \"Description for Category 1\",\r\n    \"createdDate\": \"2023-11-01T09:23:40.000+00:00\",\r\n    \"updatedDate\": \"2023-11-01T09:23:40.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/api/categories/1"
+			},
+			"response": []
+		},
+		{
+			"name": "xóa theo id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8088/api/categories/2"
+			},
+			"response": []
+		},
+		{
+			"name": "xóa cả danh mục lẫn sản phẩm",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8088/api/categories/category/C001"
+			},
+			"response": []
+		},
+		{
+			"name": "lọc sản phẩm theo tên, có phân trang",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

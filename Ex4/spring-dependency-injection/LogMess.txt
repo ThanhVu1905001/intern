@@ -1,0 +1,48 @@
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 800000
+Insufficient Balance
+Current ATM money is 800000
+Current ATM money is 1800000
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 800000
+Insufficient Balance
+Current ATM money is 800000
+Current ATM money is 1800000
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 1000000
+Insufficient Balance
+Current ATM money is 1000000
+Current ATM money is 1000000
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 1000000
+Insufficient Balance
+Current ATM money is 1000000
+Current ATM money is 1000000
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 1000000
+Insufficient Balance
+Current ATM money is 1000000
+Current ATM money is 1000000
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 1000000
+Insufficient Balance
+Current ATM money is 1000000
+Current ATM money is 1000000
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 1000000
+Insufficient Balance
+Current ATM money is 1000000
+Current ATM money is 1000000
+Current ATM money is 1000000
+CustomerId: ABC, balance: 5000000
+Current ATM money is 800000
+Insufficient Balance
+Current ATM money is 800000
+Current ATM money is 1800000

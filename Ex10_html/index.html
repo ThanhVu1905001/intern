@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityBike</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="./css/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slider.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="welcome-msg d-none d-sm-none d-md-block" >
+                                Chào mừng bạn đến với 
+                                <a>CityBike</a>
+                                |   Hotline: 
+                                <a>0934 55 88 90</a>
+                            </div>
+                            <div class="account-msg d-md-none d-sm-block">
+                                <a class="msg">
+                                    tài khoản
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div style="display: none;">
+                                    <a class="account-msg-hidden" >
+                                        <li>
+                                            <a title="Register" href="register.html">
+                                                <span>
+                                                    <i class="fa fa-key"></i>
+                                                    Đăng ký
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Login" href="#">
+                                                <span>
+                                                    <i class="fa fa-lock"></i>
+                                                    Đăng nhập
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="toplinks">
+                                <div class="links d-none d-sm-none d-md-block">
+                                    <div class="register">
+                                        <a title="Register" href="register.html">
+                                            <span>
+                                                <i class="fa fa-key"></i>
+                                                Đăng ký
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                    <div><a>|</a></div>
+
+                                    <div class="login">
+                                        <a title="Login" href="#">
+                                            <span>
+                                                <i class="fa fa-lock"></i>
+                                                Đăng nhập
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="links d-md-none d-sm-block">
+                                    <div>
+                                        <a title="search" href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                    <div class="bag_shop" onclick="window.location.href='#'">
+                                        <a title="cart" href="#">
+                                            <i class="fa fa-shopping-bag"></i>
+                                            <span class="cart-total">1</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="header container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-3 col-md-3 cl_logo">
+                        <a class="logo" href="index.html">
+                            <img src="./img/logo.png" alt="Bike-themes">
+                        </a>
+                    </div>
+                    <div class="col-lg-1 col-sm-1 col-md-1"></div>
+                    <div class="col-lg-6 col-sm-6 col-md-6 d-none d-sm-none d-md-block">
+                        <div class="search-box">
+                            <form>
+                                <select class="input-select">
+                                    <option value="0">Danh mục</option>
+                                </select>
+                                <input class="input" id="search" type="text" placeholder="Nhập thông tin tìm kiếm">
+                                <button type="submit" id="search_btn" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-2 col-md-2 d-none d-sm-none d-md-block">
+                        <div class="top-cart-contain">
+                            <div class="mini-cart" id="open_shopping_cart">
+                                <div class="basket dropdown-toggle">
+                                    <a href="#">
+                                        <i class="icon_bag">
+                                            <i class="fa-solid fa-bag-shopping"></i>
+                                            <span class="count_item_pr cart-total">1</span>
+                                        </i>
+                                        <div class="cart-box">
+                                            <span class="title">Giỏ hàng</span>
+                                            <span class="count_pr">
+                                                (
+                                                <span class="cart-total">1</span>
+                                                )&nbsp; sản phẩm
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="top-cart-content">
+                                    <ul id="cart-sidebar" class="mini-products-list count_li">
+                                        <ul class="list-item-cart">
+                                            <li class="item" style="display: flex;">
+                                                <div class="border_list">
+                                                    <a class="product-image" href="" title="Xe đạp địa hình Fornix FB021">
+                                                        <img alt="Xe đạp địa hình Fornix FB021" src="/img/5010_website_profile_1.png" width="100"></a>
+                                                        <div class="detail-item">
+                                                            <div class="product-details">
+                                                                <p class="product-name"> 
+                                                                    <a href="" title="Xe đạp địa hình Fornix FB021">Xe đạp địa hình Fornix FB021</a>
+                                                                </p>
+                                                            </div>
+                                                            <div class="product-details-bottom">
+                                                                <span class="price">3.889.000₫</span>
+                                                                
+                                                                <div class="quantity-select qty_drop_cart">
+                                                                    <input class="variantID" type="hidden" maxlength="3" name="variantId">
+                                                                    <button>–</button>
+                                                                    <input type="text" maxlength="3" min="1" readonly="" class="input-text number-sidebar" name="Lines" size="4" value="1">
+                                                                    <button>+</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <a href="" title="Xóa" class="remove-item-cart fa fa-times-circle">&nbsp;</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <div class="pd" style="border-top: 1px solid #afafaf;">
+                                            <div class="top-subtotal">Tổng tiền: 
+                                                <span class="price price_big">4.158.000₫</span>
+                                            </div>
+                                        </div>
+                                        <div class="pd right_ct" style="border-top: 1px solid #afafaf;">
+                                            <a href="/cart" class="btn btn-white">
+                                                <span>Giỏ hàng</span>
+                                            </a>
+                                            <a href="/checkout" class="btn btn-primary">
+                                                <span>Thanh toán</span>
+                                            </a>
+                                            
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="container">
+                <div class="nav-inner">
+                    <div class="hidden-desktop d-block d-sm-block d-md-none" id="mobile-menu">
+                        <ul class="nav-menu">
+                            <li>
+                                <div class="menutop">
+                                    <h2>Danh mục</h2>
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+                                <ul class="submenu" style="display: none;">
+                                    <li>
+                                        <ul class="top-nav">
+                                            <li class="level0 nacvv-8 level-top parent  active ">
+                                                <a class="level1-top" href="index.html">
+                                                    <span>Home</span>
+                                                </a>
+                                            </li>
+                                            <li class="level0 nacv-8 level-top parent">
+                                                <a class="level-top">
+                                                    <span>Sản phẩm</span>
+                                                </a>
+                                                <em>+</em>
+                                                <ul class="level0" style="display: none;">
+
+                                                </ul>
+                                            </li>
+                                            <li class="level0 nacvv-8 level-top parent">
+                                                <a class="level1-top" href="#">
+                                                    <span>Sản phẩm mới</span>
+                                                </a>
+                                            </li>
+                                            <li class="level0 nacvv-8 level-top parent">
+                                                <a class="level1-top" href="#">
+                                                    <span>Sản phẩm bán chạy</span>
+                                                </a>
+                                            </li>
+                                            <li class="level0 nacvv-8 level-top parent">
+                                                <a class="level1-top" href="#">
+                                                    <span>Tin tức</span>
+                                                </a>
+                                            </li>
+                                            <li class="level0 nacvv-8 level-top parent">
+                                                <a class="level1-top" href="#">
+                                                    <span>Bộ sưu tập</span>
+                                                </a>
+                                            </li>
+                                            <li class="level0 nacvv-8 level-top parent">
+                                                <a class="level1-top" href="#">
+                                                    <span>liên hệ</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul id="nav" class="d-none d-sm-none d-md-block">
+                        <li class="level0  parent drop-menu  active ">
+                            <a class="level1-top" href="index.html">
+                                <i class="fa-solid fa-house-chimney"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="level0  parent drop-menu">
+                            <a class="level1">
+                                <span>Sản phẩm</span>
+                                <i style="margin: 1px 5px;" class="fa-solid fa-sort-down icon_down"></i>
+                            </a>
+                            
+                            <ul class="level1" style="display: none;">
+                                <i class="fa fa-sort-asc icon_arr"></i>    
+                                <li class="level1 first parent "><a href="#"><span>Xe đạp thể thao</span></a>
+                                </li>
+                                <li class="level1 first parent "><a href="#"><span>Xe đạp khác</span></a>
+                                </li>
+                                <li class="level1 first parent "><a href="#"><span>Xe đạp thời trang</span></a>
+                                </li>
+                                <li class="level1 first parent "><a href="#"><span>Xe đạp nhập khẩu</span></a>
+                                </li>
+                                <li class="level1 first parent "><a href="#"><span>Máy tập</span></a></li>
+                                <li class="level1 first parent "><a href="#"><span>Mũ bảo hiểm</span></a>
+                                </li>
+                                <li class="level1 first parent "><a href="#"><span>Dụng cụ thể thao</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="level0  parent drop-menu">
+                            <a class="level1-top" href="#">
+                                <span>Sản phẩm mới</span>
+                            </a>
+                        </li>
+                        <li class="level0  parent drop-menu">
+                            <a class="level1-top" href="#">
+                                <span>Sản phẩm bán chạy</span>
+                            </a>
+                        </li>
+                        <li class="level0  parent drop-menu">
+                            <a class="level1-top" href="#">
+                                <span>Tin tức</span>
+                            </a>
+                        </li>
+                        <li class="level0  parent drop-menu">
+                            <a class="level1-top" href="#">
+                                <span>Bộ sưu tập</span>
+                            </a>
+                        </li>
+                        <li class="level0  parent drop-menu">
+                            <a class="level1-top" href="#">
+                                <span>liên hệ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="slider" class="d-none d-sm-none d-md-block">
+            <div class="slide-container aspect-ratio-169">
+                <img src="/img/slide01.jpg">
+                <img src="/img/slide-2.jpg">
+                <img src="/img/slide01.jpg">    
+            </div>
+            <div class="dot-container">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="owl-buttons">
+                <div class="owl-prev">
+                    <a class="cover_icon_prev"><i class="fa-solid fa-chevron-left icon-chevron"></i></a>
+                </div>
+                <div class="owl-next">
+                    <a class="cover_icon_next"><i class="fa-solid fa-chevron-right icon-chevron"></i></a>    
+                </div>
+            </div>
+        </section>
+        <section class="main-container col1-layout home-content-container">
+            <div class="container">
+                <div class="std row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="box_collection_pr">
+                            <div class="title_st">
+                                <h2>Danh mục sản phẩm</h2>
+                                <span class="arrow_title d-none d-sm-none d-md-block"></span>
+                                <div class="show_nav_bar d-sm-block d-md-none d-lg-none"></div>
+                            </div>
+                            <div class="list_item">
+                                <ul>
+                                    <li><a href="#">Sản phẩm mới</a></li>
+                                    <li><a href="#">Sản phẩm nổi bật</a></li> 
+                                    <li><a href="#">Sản phẩm khuyến mãi</a></li>    
+                                    <li><a href="#">Xe đạp thể thao</a></li>
+                                    <li><a href="#">Xe đạp khác</a></li>
+                                    <li><a href="#">Xe đạp thời trang</a></li>
+                                    <li><a href="#">Xe đạp nhập khẩu</a></li>
+                                    <li><a href="#">Máy tập</a></li>
+                                    <li><a href="#">Mũ bảo hiểm</a></li>
+                                    <li><a href="#">Dụng cụ thể thao</a></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+    
+                        <div class="popular-posts widget widget__sidebar stl_list_item">
+                            <div class="title_st">
+                                <h2>Sản phẩm bán chạy</h2>
+                                <span class="arrow_title"></span>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="posts-list unstyled clearfix">
+    
+                                    <li>
+                                        <figure class="featured-thumb" style="width:42%">
+                                            <a href="#">
+                                                <img alt="Xe đạp Sport PTB" src="/img/5010_website_profile_1 (1).png" style=" width: 100px;">
+                                            </a>
+                                        </figure>
+                                        <!--featured-thumb-->
+                                        <h3><a title="Xe đạp Sport PTB" href="#">Xe đạp Tiến Sport PTB</a></h3>                             
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>    
+                                        <div class="price-box">
+                                            <p class="special-price">
+                                                <span class="price">489.000₫</span>
+                                            </p>
+                                        </div>
+    
+                                    </li>
+    
+                                    <li>
+                                        <figure class="featured-thumb" style="width:42%">
+                                            <a title="Xe đạp địa hình Fornix FB021" href="#">
+                                                <img alt="Xe đạp địa hình Fornix FB021" src="/img/bronson_website_profile_1.png" style=" width: 100px;">
+                                            </a>
+                                        </figure>
+                                        <!--featured-thumb-->
+                                        <h3><a title="Xe đạp địa hình Fornix FB021" href="#">Xe đạp địa hình Fornix FB021</a></h3>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>    
+                                        <div class="price-box">
+                                            <p class="special-price">
+                                                <span class="price">3.889.000₫</span>
+                                            </p>
+                                            
+                                        </div>
+    
+                                    </li>
+    
+                                    <li>
+                                        <figure class="featured-thumb" style="width:42%">
+                                            <a title="Xe Đạp LTT" href="#">
+                                                <img alt="Xe Đạp LTT" src="/img/chameleon_website_profile_1.png" style=" width: 100px;">
+                                            </a>
+                                        </figure>
+                                        <!--featured-thumb-->
+                                        <h3><a title="Xe Đạp LTT" href="#">Xe Đạp LTT</a></h3>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>    
+                                        <div class="price-box">
+                                            <p class="special-price"><span class="price">1.799.000₫ </span></p>
+                                        </div>
+    
+                                    </li>
+    
+                                    <li>
+                                        <figure class="featured-thumb" style="width:42%">
+                                            <a title="Xe đạp Slider" href="#">
+                                                <img alt="Xe đạp Slider" src="/img/heckler_website_profile_1.png" style=" width: 100px;">
+                                            </a>
+                                        </figure>
+                                        <!--featured-thumb-->
+                                        <h3><a title="Xe đạp Slider" href="#">Xe đạp AB Slider</a></h3>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>    
+                                        <div class="price-box">
+                                            <p class="special-price">
+                                                <span class="price">269.000₫</span>
+                                            </p>
+                                        
+                                        </div>
+    
+                                    </li>
+    
+                                    <li>
+                                        <figure class="featured-thumb" style="width:42%">
+                                            <a title="Xe đạp Six Pack Care 2015" href="#">
+                                                <img alt="Xe đạp Six Pack Care 2015" src="/img/highball275-blue-web_1_1.png" style=" width: 100px;">
+                                            </a>
+                                        </figure>
+                                        <!--featured-thumb-->
+                                        <h3><a title="Xe đạp Six Pack Care 2015" href="#">Xe Đạp Six Pack Care 2015</a></h3>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>    
+                                        <div class="price-box">
+                                            <p class="special-price">
+                                                <span class="price">1.119.000₫</span>
+                                            </p>
+                                           
+                                        </div>
+    
+                                    </li>
+    
+                                </ul>
+                            </div>
+                            <!--widget-content-->
+                        </div>
+    
+    
+                        <div class="banner_col_right_index  d-none d-sm-none d-md-block">
+                            <a href="#"><img alt="alt" src="/img/banner46b01.jpg"></a>
+                        </div>
+    
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+    
+                        <div class="best-seller-pro">
+                            <div class="slider-items-products">
+                                <div class="new_title center">
+                                    <h2>Sản phẩm nổi bật</h2>
+                                    <div class="small-buttons">
+                                        <div class="s-prev">
+                                            <a class="s_cover_icon_prev">
+                                                <i class="fa-solid fa-chevron-left s-icon-chevron"></i>
+                                            </a>
+                                        </div>
+                                        <div class="s-next">
+                                            <a class="s_cover_icon_next">
+                                                <i class="fa-solid fa-chevron-right s-icon-chevron"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="best-seller-slider" class="product-flexslider hidden-buttons">
+                                    <div class="slider-items slider-width-col4 owl-carousel owl-theme" style="opacity: 1; display: block;">
+                                        <div class="owl-wrapper-outer autoHeight" style="height: 750px;"><div class="owl-wrapper" style="width: 1416px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);"><div class="owl-item" style="width: 885px;"><div class="product-item-slide  row">
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 hienmodal">
+    
+    
+                                                <div class="col-item">
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe đạp Sport PTB" href="#">
+                                                            <img src="/img/5010_website_profile_1 (1).png" class="img-responsive" alt="Xe đạp Sport PTB">
+                                                        </a>
+                                                    </div>
+                                                  
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp Sport PTB" href="#">Xe đạp Sport PTB</a></h3></div>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>    
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price">
+                                                                        <span class="price">489.000₫</span>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 hienquickview">
+    
+    
+                                                <div class="col-item">
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe đạp địa hình Fornix FB021" href="#">
+                                                            <img src="/img/bronson_website_profile_1.png" class="img-responsive" alt="Xe đạp địa hình Fornix FB021">
+                                                        </a>
+                                                    </div>
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp địa hình Fornix FB021" href="#">Xe đạp địa hình Fornix FB021</a></h3></div>
+                                                            
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>  
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price">
+                                                                        <span class="price">3.889.000₫</span>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 first-in-row">
+    
+    
+                                                <div class="col-item">
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe Đạp LTT" href="#">
+                                                            <img src="/img/chameleon_website_profile_1.png" class="img-responsive" alt="Xe Đạp LTT">
+                                                        </a>
+                                                    </div>
+                                
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp LTT" href="#">Xe đạp LTT</a></h3></div>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>  
+
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price"><span class="price">1.799.000₫ </span></p>
+                                                                </div>
+    
+                                                            </div>
+              
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                <div class="col-item">
+
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe đạp Slider" href="#">
+                                                            <img src="/img/chameleon_website_profile_1.png" class="img-responsive" alt="Xe đạp Slider">
+                                                        </a>
+                                                    </div>
+                                              
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp Slider" href="#">Xe đạp AB Slider</a></h3></div>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>  
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price">
+                                                                        <span class="price">269.000₫</span>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                        
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 first-in-row">
+    
+    
+                                                <div class="col-item">
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe đạp Six Pack Care 2015" href="#">
+                                                            <img src="/img/heckler_website_profile_1.png" class="img-responsive" alt="Xe đạp Six Pack Care 2015">
+                                                        </a>
+                                                    </div>
+                                                    
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp Six Pack Care 2015" href="#">Xe đạp Six Pack Care 2015</a></h3></div>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>  
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price">
+                                                                        <span class="price">1.119.000₫</span>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                    
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                <div class="col-item">
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe đạp" href="#">
+                                                            <img src="/img/highball275-blue-web_1_1.png" class="img-responsive" alt="Xe đạp">
+                                                        </a>
+                                                    </div>
+                                                    
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp" href="#">Xe đạp Pull 60 - 100cm</a></h3></div>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>  
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price">
+                                                                        <span class="price">269.000₫</span>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                            
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 first-in-row">
+    
+    
+                                                <div class="col-item">
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe đạp Seefar" href="#">
+                                                            <img src="/img/stigmata-orange-web_1.png" class="img-responsive" alt="Xe đạp Seefar">
+                                                        </a>
+                                                    </div>
+                                                 
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp Seefar" href="#">Xe đạp Seefar</a></h3></div>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>  
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price"><span class="price">1.800.000₫ </span></p>
+                                                                </div>
+    
+                                                            </div>
+                                                            
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                <div class="col-item">
+    
+                                                    <div class="product-image-area">
+                                                        <a class="product-image" title="Xe đạp không phanh Aleoca" href="#">
+                                                            <img src="/img/v10_black_cc_hero_web_1.png" class="img-responsive" alt="Xe đạp không phanh Aleoca">
+                                                        </a>
+                                                    </div>
+                                                    <div class="hidden_mobile d-none d-sm-none d-md-block">
+                                                        <form action="#" method="post" class="variants" id="product-actions-1220133" enctype="multipart/form-data">
+    
+    
+                                                            <div class="hover_fly">
+                                                                <a class="exclusive ajax_add_to_cart_button" href="#" title=" Xem ngay">
+                                                                    <div><i class="icon-shopping-cart"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+    
+                                                            <a href="#" class="over_bg"></a>
+                                                        </form>
+                                                    </div>
+                                                    <div class="info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"><h3><a title="Xe đạp không phanh Aleoca" href="#">Xe đạp Aleoca</a></h3></div>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>  
+                                                            <!--item-title-->
+                                                            <div class="item-content">
+    
+                                                                <div class="price-box">
+                                                                    <p class="special-price"><span class="price">1.250.000₫ </span></p>
+                                                                </div>
+    
+                                                            </div>
+                                                         
+                                                            <!--item-content-->
+                                                        </div>
+                                                        <!--info-inner-->
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="banner_center_index" style="margin-bottom: 25px;">
+                                <a href="#"><img alt="alt" src="/img/banner56b01.jpg"></a>
+                            </div>
+    
+    
+                            <div class="best-seller-pro">
+                                <div class="slider-items-products">
+                                    <div class="new_title center">
+                                        <h2>Sản phẩm khuyến mãi</h2>
+                                        <div class="small-buttons">
+                                            <div class="s-prev">
+                                                <a class="s_cover_icon_prev">
+                                                    <i class="fa-solid fa-chevron-left s-icon-chevron"></i>
+                                                </a>
+                                            </div>
+                                            <div class="s-next">
+                                                <a class="s_cover_icon_next">
+                                                    <i class="fa-solid fa-chevron-right s-icon-chevron"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="bag-seller-slider" class="product-flexslider hidden-buttons">
+                                        <div class="slider-items slider-width-col4 owl-carousel owl-theme" style="opacity: 1; display: block;">
+    
+    
+                                            <div class="owl-wrapper-outer autoHeight" style="height: 700px;"><div class="owl-wrapper" style="width: 1416px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);"><div class="owl-item" style="width: 885px;"><div class="product-item-slide  row">
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                    <div class="col-item">
+
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe đạp Six Pack Care 2015" href="#">
+                                                                <img src="/img/heckler_website_profile_1.png" class="img-responsive" alt="Xe đạp Six Pack Care 2015">
+                                                            </a>
+                                                        </div>
+                                                       
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe đạp Six Pack Care 2015" href="#">Xe đạp Six Pack Care 2015</a></h3></div>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>  
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">1.119.000₫</span>
+                                                                        </p>
+                                                                    </div>
+    
+                                                                </div>
+                                                                
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                    <div class="col-item">
+
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe đạp Slider" href="#">
+                                                                <img src="/img/5010_website_profile_1 (1).png" class="img-responsive" alt="Xe đạp Slider">
+                                                            </a>
+                                                        </div>
+                                                        
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe đạp Slider" href="#">Xe đạp AB Slider</a></h3></div>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">269.000₫</span>
+                                                                        </p>
+                                                                    </div>
+    
+                                                                </div>
+                                                               
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 first-in-row">
+    
+    
+                                                    <div class="col-item">
+
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe đạp Fornix A03NM13M" href="#">
+                                                                <img src="/img/bronson_website_profile_1.png" class="img-responsive" alt="Xe đạp Fornix A03NM13M">
+                                                            </a>
+                                                        </div>
+                                                        
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe đạp Fornix A03NM13M" href="#">Xe đạp Fornix A03NM13M</a></h3></div>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">320.000₫</span>
+                                                                        </p>
+                                                                    </div>
+    
+                                                                </div>
+                                                                
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                    <div class="col-item">
+
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe đạp A01N020L" href="#">
+                                                                <img src="/img/chameleon_website_profile_1.png" class="img-responsive" alt="Xe đạp A01N020L">
+                                                            </a>
+                                                        </div>
+                                                   
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe đạp A01N020L" href="#">Xe đạp A01N020L</a></h3></div>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">280.000₫</span>
+                                                                        </p>
+                                                                    </div>
+    
+                                                                </div>
+                                                                
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 first-in-row">
+    
+    
+                                                    <div class="col-item">
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe đạp Andes 111 màu đen" href="#">
+                                                                <img src="/img/heckler_website_profile_1.png" class="img-responsive" alt="Xe đạp Andes 111 màu đen">
+                                                            </a>
+                                                        </div>
+                                                  
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe đạp Andes 111 màu đen" href="#">Xe đạp Andes 111 màu đen</a></h3></div>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">3.400.000₫</span>
+                                                                        </p>
+                                                                    </div>
+    
+                                                                </div>
+                                                               
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                    <div class="col-item">
+
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe Đạp Nimbus 3" href="#">
+                                                                <img src="/img/highball275-blue-web_1_1.png" class="img-responsive" alt="Xe Đạp Nimbus 3">
+                                                            </a>
+                                                        </div>
+                                                        <div class="hidden_mobile  d-none d-sm-none d-md-block">
+                                                            <form action="#" method="post" class="variants" id="product-actions-1219812" enctype="multipart/form-data">
+    
+    
+                                                                <div class="hover_fly">
+                                                                    <a class="exclusive ajax_add_to_cart_button" href="#" title=" Xem ngay">
+                                                                        <div><i class="icon-shopping-cart"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+    
+                                                                <a href="#" class="over_bg"></a>
+                                                            </form>
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe Đạp Nimbus 3" href="#">Xe
+                                                                    Đạp Nimbus 3</a></h3></div>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">1.100.000₫</span>
+                                                                        </p>
+
+                                                                    </div>
+    
+                                                                </div>
+                                                                
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480 first-in-row">
+    
+    
+                                                    <div class="col-item">
+    
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe thể thao Fatbike " href="#">
+                                                                <img src="img/stigmata-orange-web_1.png" class="img-responsive" alt="Xe thể thao Fatbike ">
+                                                            </a>
+                                                        </div>
+                                                        <div class="hidden_mobile  d-none d-sm-none d-md-block">
+                                                            <form action="#" method="post" class="variants" id="product-actions-1219935" enctype="multipart/form-data">
+    
+    
+                                                                <div class="hover_fly">
+                                                                    <a class="exclusive ajax_add_to_cart_button" href="#" title=" Xem ngay">
+                                                                        <div><i class="icon-shopping-cart"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+    
+                                                                <a href="#" class="over_bg"></a>
+                                                            </form>
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe thể thao Fatbike " href="#">Xe
+                                                                    thể thao Fatbike </a></h3></div>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">1.250.000₫</span>
+                                                                        </p>
+
+                                                                    </div>
+    
+                                                                </div>
+                                                               
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 full_width480">
+    
+    
+                                                    <div class="col-item">
+    
+                                                        <div class="product-image-area">
+                                                            <a class="product-image" title="Xe đạp Fornix FB2007-PRA14" href="#">
+                                                                <img src="/img/5010_website_profile_1.png" class="img-responsive" alt="Xe đạp Fornix FB2007-PRA14">
+                                                            </a>
+                                                        </div>
+                                                        <div class="hidden_mobile  d-none d-sm-none d-md-block">
+                                                            <form action="#" method="post" class="variants" id="product-actions-1219983" enctype="multipart/form-data">
+    
+    
+                                                                <div class="hover_fly">
+                                                                    <a class="exclusive ajax_add_to_cart_button" href="#" title=" Xem ngay">
+                                                                        <div><i class="icon-shopping-cart"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+    
+                                                                <a href="#" class="over_bg"></a>
+                                                            </form>
+                                                        </div>
+                                                        <div class="info">
+                                                            <div class="info-inner">
+                                                                <div class="item-title"><h3><a title="Xe đạp Fornix FB2007-PRA14" href="#">Xe
+                                                                    đạp Fornix FB2007-PRA14</a></h3></div>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <!--item-title-->
+                                                                <div class="item-content">
+    
+                                                                    <div class="price-box">
+                                                                        <p class="special-price">
+                                                                            <span class="price">3.100.000₫</span>
+                                                                        </p>
+                                                                    </div>
+    
+                                                                </div>
+                                                               
+                                                                <!--item-content-->
+                                                            </div>
+                                                            <!--info-inner-->
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                          </div></div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured-pro bg_spc">
+            <div class="slider-items-products container">
+                <div class="new_title center">
+                    <h2>Bán chạy trong tuần</h2>
+                    <span></span>
+                </div>
+                <div id="featured-slider" class="product-flexslider hidden-buttons block_btn_cart">
+                    <div class="slider-items slider-width-col4 owl-carousel owl-theme" style="opacity: 1; display: block;">
+                        <div class="owl-wrapper-outer autoHeight" style="height: 420px;">
+                            <div class="owl-wrapper" style="padding-left: 20px; width: 1190px;height: 100%; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                <div class="owl-item" style="width: 290px;">
+                                    <div class="item">
+                                        <div class="col-item">
+                                            <div class="sale-label sale-top-right">-2%</div>
+                
+                                            <div class="product-image-area">
+                                                <a class="product-image" title="Xe đạp Sport PTB" href="#">
+                                                    <img src="/img/5010_website_profile_1.png" class="img-responsive" alt="Xe đạp Sport PTB">
+                                                </a>
+                                            </div>
+    
+                                            <div class="info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"><h3><a title="Xe đạp Sport PTB" href="#">Xe đạp Sport PTB</a></h3></div>
+                                                    <!--item-title-->
+                                                    <div class="item-content">
+                
+                                                        <div class="price-box">
+                                                            <p class="special-price">
+                                                                <span class="price">489.000₫</span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-sep">-</span>
+                                                                <span class="price">500.000₫</span>
+                                                            </p>
+                                                        </div>
+                
+                                                    </div>
+                                                    <div class="button_mobile">
+                                                        <form action="#" method="post" class="variants" id="product-actions-1195911" enctype="multipart/form-data">
+                
+                
+                                                            <div class="actions">
+                                                                <input type="hidden" name="variantId" value="1850772">
+                                                                <button class="button btn-cart btn-cart add_to_cart" title="Cho vào giỏ hàng" type="button"><span>Xem ngay</span>
+                                                                </button>
+                                                            </div>
+                
+                                                        </form>
+                                                    </div>
+                                                    <!--item-content-->
+                                                </div>
+                                                <!--info-inner-->
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="owl-item" style="width: 290px;">
+                                    <div class="item">
+                                        <div class="col-item">
+                                            <div class="sale-label sale-top-right">-2%</div>
+                
+                                            <div class="product-image-area">
+                                                <a class="product-image" title="Xe đạp Sport PTB" href="#">
+                                                    <img src="/img/5010_website_profile_1.png" class="img-responsive" alt="Xe đạp Sport PTB">
+                                                </a>
+                                            </div>
+    
+                                            <div class="info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"><h3><a title="Xe đạp Sport PTB" href="#">Xe đạp Sport PTB</a></h3></div>
+                                                    <!--item-title-->
+                                                    <div class="item-content">
+                
+                                                        <div class="price-box">
+                                                            <p class="special-price">
+                                                                <span class="price">489.000₫</span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-sep">-</span>
+                                                                <span class="price">500.000₫</span>
+                                                            </p>
+                                                        </div>
+                
+                                                    </div>
+                                                    <div class="button_mobile">
+                                                        <form action="#" method="post" class="variants" id="product-actions-1195911" enctype="multipart/form-data">
+                
+                
+                                                            <div class="actions">
+                                                                <input type="hidden" name="variantId" value="1850772">
+                                                                <button class="button btn-cart btn-cart add_to_cart" title="Cho vào giỏ hàng" type="button"><span>Xem ngay</span>
+                                                                </button>
+                                                            </div>
+                
+                                                        </form>
+                                                    </div>
+                                                    <!--item-content-->
+                                                </div>
+                                                <!--info-inner-->
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 290px;">
+                                    <div class="item">
+                                        <div class="col-item">
+                                            <div class="sale-label sale-top-right">-2%</div>
+                
+                                            <div class="product-image-area">
+                                                <a class="product-image" title="Xe đạp Sport PTB" href="#">
+                                                    <img src="/img/5010_website_profile_1.png" class="img-responsive" alt="Xe đạp Sport PTB">
+                                                </a>
+                                            </div>
+    
+                                            <div class="info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"><h3><a title="Xe đạp Sport PTB" href="#">Xe đạp Sport PTB</a></h3></div>
+                                                    <!--item-title-->
+                                                    <div class="item-content">
+                
+                                                        <div class="price-box">
+                                                            <p class="special-price">
+                                                                <span class="price">489.000₫</span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-sep">-</span>
+                                                                <span class="price">500.000₫</span>
+                                                            </p>
+                                                        </div>
+                
+                                                    </div>
+                                                    <div class="button_mobile">
+                                                        <form action="#" method="post" class="variants" id="product-actions-1195911" enctype="multipart/form-data">
+                
+                
+                                                            <div class="actions">
+                                                                <input type="hidden" name="variantId" value="1850772">
+                                                                <button class="button btn-cart btn-cart add_to_cart" title="Cho vào giỏ hàng" type="button"><span>Xem ngay</span>
+                                                                </button>
+                                                            </div>
+                
+                                                        </form>
+                                                    </div>
+                                                    <!--item-content-->
+                                                </div>
+                                                <!--info-inner-->
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 290px;">
+                                    <div class="item">
+                                        <div class="col-item">
+                                            <div class="sale-label sale-top-right">-2%</div>
+                
+                                            <div class="product-image-area">
+                                                <a class="product-image" title="Xe đạp Sport PTB" href="#">
+                                                    <img src="/img/5010_website_profile_1.png" class="img-responsive" alt="Xe đạp Sport PTB">
+                                                </a>
+                                            </div>
+    
+                                            <div class="info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"><h3><a title="Xe đạp Sport PTB" href="#">Xe đạp Sport PTB</a></h3></div>
+                                                    <!--item-title-->
+                                                    <div class="item-content">
+                
+                                                        <div class="price-box">
+                                                            <p class="special-price">
+                                                                <span class="price">489.000₫</span>
+                                                            </p>
+                                                            <p class="old-price">
+                                                                <span class="price-sep">-</span>
+                                                                <span class="price">500.000₫</span>
+                                                            </p>
+                                                        </div>
+                
+                                                    </div>
+                                                    <div class="button_mobile">
+                                                        <form action="#" method="post" class="variants" id="product-actions-1195911" enctype="multipart/form-data">
+                
+                
+                                                            <div class="actions">
+                                                                <input type="hidden" name="variantId" value="1850772">
+                                                                <button class="button btn-cart btn-cart add_to_cart" title="Cho vào giỏ hàng" type="button"><span>Xem ngay</span>
+                                                                </button>
+                                                            </div>
+                
+                                                        </form>
+                                                    </div>
+                                                    <!--item-content-->
+                                                </div>
+                                                <!--info-inner-->
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <section class="middle-slider container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="new_title center">
+                        <h2>Sản phẩm xem nhiều</h2>
+                        <div class="small-buttons">
+                            <div class="s-prev">
+                                <a class="s_cover_icon_prev">
+                                    <i class="fa-solid fa-chevron-left s-icon-chevron"></i>
+                                </a>
+                            </div>
+                            <div class="s-next">
+                                <a class="s_cover_icon_next">
+                                    <i class="fa-solid fa-chevron-right s-icon-chevron"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget-content" id="small-slider">
+                        <ul class="posts-list slider-items-products unstyled clearfix slider-items owl-carousel owl-theme" style="opacity: 1; display: block;">
+                            <div class="owl-wrapper-outer autoHeight" style="height: 230px;">
+                                <div class="owl-wrapper" style="width: 4980px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                    <div class="owl-item" style="width: 415px;">
+                                        <li class="product-item-slide">
+                                            <div class="box_width">
+                                                <figure class="featured-thumb">
+                                                    <a title="Xe đạp PTB" href="#">
+                                                        <img alt="Xe đạp PTB" src="/img/5010_website_profile_1.png" style=" width: 100px;">
+                                                    </a>
+                                                </figure>
+                                                <!--featured-thumb-->
+                                                <h3><a title="Xe đạp PTB" href="#">Xe đạp PTB</a></h3>
+                
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">489.000₫</span>
+                                                    </p>
+                                                </div>
+                
+                                            </div>
+                                            <div class="box_width">
+                                                <figure class="featured-thumb">
+                                                    <a title="Xe đạp địa hình Fornix FB021" href="#">
+                                                        <img alt="Xe đạp địa hình Fornix FB021" src="/img/v10_black_cc_hero_web_1.png" style=" width: 100px;">
+                                                    </a>
+                                                </figure>
+                                                <!--featured-thumb-->
+                                                <h3><a title="Xe đạp địa hình Fornix FB021" href="#">Xe đạp địa hình Fornix FB021</a></h3>
+                
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">3.889.000₫</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="new_title center">
+                        <h2>Phụ kiện đi kèm</h2>
+                        <div class="small-buttons">
+                            <div class="s-prev">
+                                <a class="s_cover_icon_prev">
+                                    <i class="fa-solid fa-chevron-left s-icon-chevron"></i>
+                                </a>
+                            </div>
+                            <div class="s-next">
+                                <a class="s_cover_icon_next">
+                                    <i class="fa-solid fa-chevron-right s-icon-chevron"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget-content" id="small-slider">
+                        <ul class="posts-list slider-items-products unstyled clearfix slider-items owl-carousel owl-theme" style="opacity: 1; display: block;">
+                            <div class="owl-wrapper-outer autoHeight" style="height: 230px;">
+                                <div class="owl-wrapper" style="width: 4980px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                    <div class="owl-item" style="width: 415px;">
+                                        <li class="product-item-slide">
+                                            <div class="box_width">
+                                                <figure class="featured-thumb">
+                                                    <a title="Xe đạp PTB" href="#">
+                                                        <img alt="Xe đạp PTB" src="/img/5010_website_profile_1.png" style=" width: 100px;">
+                                                    </a>
+                                                </figure>
+                                                <!--featured-thumb-->
+                                                <h3><a title="Xe đạp PTB" href="#">Xe đạp PTB</a></h3>
+                
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">489.000₫</span>
+                                                    </p>
+                                                </div>
+                
+                                            </div>
+                                            <div class="box_width">
+                                                <figure class="featured-thumb">
+                                                    <a title="Xe đạp địa hình Fornix FB021" href="#">
+                                                        <img alt="Xe đạp địa hình Fornix FB021" src="/img/v10_black_cc_hero_web_1.png" style=" width: 100px;">
+                                                    </a>
+                                                </figure>
+                                                <!--featured-thumb-->
+                                                <h3><a title="Xe đạp địa hình Fornix FB021" href="#">Xe đạp địa hình Fornix FB021</a></h3>
+                
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">3.889.000₫</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="new_title center">
+                        <h2>Phụ tùng thay thế</h2>
+                        <div class="small-buttons">
+                            <div class="s-prev">
+                                <a class="s_cover_icon_prev">
+                                    <i class="fa-solid fa-chevron-left s-icon-chevron"></i>
+                                </a>
+                            </div>
+                            <div class="s-next">
+                                <a class="s_cover_icon_next">
+                                    <i class="fa-solid fa-chevron-right s-icon-chevron"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget-content" id="small-slider">
+                        <ul class="posts-list slider-items-products unstyled clearfix slider-items owl-carousel owl-theme" style="opacity: 1; display: block;">
+                            <div class="owl-wrapper-outer autoHeight" style="height: 230px;">
+                                <div class="owl-wrapper" style="width: 4980px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                    <div class="owl-item" style="width: 415px;">
+                                        <li class="product-item-slide">
+                                            <div class="box_width">
+                                                <figure class="featured-thumb">
+                                                    <a title="Xe đạp PTB" href="#">
+                                                        <img alt="Xe đạp PTB" src="/img/5010_website_profile_1.png" style=" width: 100px;">
+                                                    </a>
+                                                </figure>
+                                                <!--featured-thumb-->
+                                                <h3><a title="Xe đạp PTB" href="#">Xe đạp PTB</a></h3>
+                
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">489.000₫</span>
+                                                    </p>
+                                                </div>
+                
+                                            </div>
+                                            <div class="box_width">
+                                                <figure class="featured-thumb">
+                                                    <a title="Xe đạp địa hình Fornix FB021" href="#">
+                                                        <img alt="Xe đạp địa hình Fornix FB021" src="/img/v10_black_cc_hero_web_1.png" style=" width: 100px;">
+                                                    </a>
+                                                </figure>
+                                                <!--featured-thumb-->
+                                                <h3><a title="Xe đạp địa hình Fornix FB021" href="#">Xe đạp địa hình Fornix FB021</a></h3>
+                
+                                                <div class="price-box">
+                                                    <p class="special-price">
+                                                        <span class="price">3.889.000₫</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-blog container">
+            <div class="row" style="margin: 10px;">
+                <div class="col-sm-12">
+                    <div class="new_title center">
+                        <h2><span>Tin tức</span></h2>
+                    </div>
+                </div>
+        
+                <div class="col-sm-12 col-md-4">
+                    <div class="blog-img">
+                        <a href="#">
+                            <img alt="Bán xe đạp Nhật hàng bãi,nhiều mẫu đẹp"
+                                 src="/img/2010-trek-madone-6-colors.png">
+                        </a>
+                        
+                    </div>
+                    <div class="box_content_blog">
+                        <h2><a href="#"> Bán xe đạp Nhật hàng bãi, nhiều mẫu đẹp</a></h2>
+                        <div class="post-date"><i class="fa fa-calendar"></i>&nbsp;13/01/2016 <i class="fa fa-user"></i>&nbsp;Nguyễn
+                            Tùng <i class="fa fa-comment-o"></i>&nbsp;<i class="fa-regular fa-comment"></i> 3 bình luận
+                        </div>
+        
+                        <p>
+                        <p style="text-align: justify;">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh</p></p>
+        
+                        <a style="font-weight: normal;font-size: 13px;"
+                           href="#">Đọc thêm <i
+                                class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+        
+                <div class="col-sm-12 col-md-4">
+                    <div class="blog-img">
+                        <a href="#">
+        
+                            <img alt="Lời khuyên khi mua máy tập thể dục tại nhà"
+                                 src="/img/d613702755473.562dd09aa01d8.png">
+        
+                        </a>
+                    </div>
+                    <div class="box_content_blog">
+                        <h2><a href="#">Bán xe đạp Nhật hàng bãi, nhiều mẫu đẹp</a></h2>
+                        <div class="post-date" style="width: 100%;"><i class="fa fa-calendar"></i>&nbsp;13/01/2016 <i class="fa fa-user"></i>&nbsp;Nguyễn
+                            Tùng <i class="fa fa-comment-o"></i>&nbsp;<i class="fa-regular fa-comment"></i> 1 bình luận
+                        </div>
+        
+                        <p>
+                        <p style="text-align: justify;">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh</p></p>
+        
+                        <a style="font-weight: normal;font-size: 13px;"
+                           href="#">Đọc thêm <i
+                                class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+        
+                <div class="col-sm-12 col-md-4">
+                    <div class="blog-img">
+                        <a href="#">
+        
+                            <img alt="Đạp xe nhẹ và nhanh bằng 3 cách sau"
+                                 src="/img/Santa-Cruz-Nomad-1.png">
+        
+                        </a>
+                    </div>
+                    <div class="box_content_blog">
+                        <h2><a href="#">Bán xe đạp Nhật hàng bãi, nhiều mẫu đẹp</a></h2>
+                        <div class="post-date"><i class="fa fa-calendar"></i>&nbsp;13/01/2016 <i class="fa fa-user"></i>&nbsp;Nguyễn
+                            Tùng <i class="fa fa-comment-o"></i>&nbsp;<i class="fa-regular fa-comment"></i> 0 bình luận
+                        </div>
+        
+                        <p>
+                        <p style="text-align: justify;">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh</p></p>
+        
+                        <a style="font-weight: normal;font-size: 13px;"
+                           href="#">Đọc thêm <i
+                                class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="brand-logo ">
+                <div class="container">
+                    <div class="slider-items-products">
+                        <div id="brand-logo-slider" class="product-flexslider hidden-buttons">
+                            <div class="slider-items slider-width-col6">
+                                <div class="item"><a href="#"><img src="/img/b-logo56b01.png"alt="Image"></a></div>
+                                <div class="item"><a href="#"><img src="/img/b-logo56b01.png"alt="Image"></a></div>
+                                <div class="item"><a href="#"><img src="/img/b-logo56b01.png"alt="Image"></a></div>
+                                <div class="item"><a href="#"><img src="/img/b-logo56b01.png"alt="Image"></a></div>
+                                <div class="item"><a href="#"><img src="/img/b-logo56b01.png"alt="Image"></a></div>
+                                <div class="item"><a href="#"><img src="/img/b-logo56b01.png"alt="Image"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle container" style="padding: 35px 0;">
+                <div class="row" style="margin: 10px;">
+                    <div class="col-md-4 col-sm-4">
+                        <h2 class="h2_footer">Về chúng tôi</h2>
+                        <span class="sp_footer"></span>
+                        <div class="footer-logo">
+                            <a class="logo" href="index.html">
+    
+                                <img alt="Bike-themes" src="/img/logo_footer6b01.png"/>
+    
+                            </a>
+                        </div>
+                        <p>CITIBike được thành lập với niềm đam mê và khát vọng thành công trong lĩnh vực Thể thao. Chúng
+                            tôi đã và đang khẳng định được vị trí hàng đầu bằng những sản phẩm tốt nhất.
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <h2 class="h2_footer">Dịch vụ</h2>
+                        <span class="sp_footer"></span>
+                        <ul class="links">
+    
+                            <li><a href="#">Đăng ký tên miền</a></li>
+    
+                            <li><a href="#">Tên miền miễn phí</a></li>
+
+                            <li><a href="#">Dịch vụ email</a></li>
+    
+                            <li><a href="#">Quảng cáo Google Adwords</a></li>
+    
+                            <li><a href="#">Phần mềm quản lý bán hàng</a></li>
+                            <li><a href="#">Thiết kế web đa ngành</a></li>
+                            <li><a href="#">Nhà phát triển ứng dụng</a></li>
+    
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h2 class="h2_footer">Đăng ký nhận tin</h2>
+                        <span class="sp_footer"></span>
+                        <ul class="links">
+    
+                            <li style="margin-bottom: 10px;"><a href="#">Nhập thông tin email của bạn để nhận những chính sách ưu đãi từ chúng tôi</a></li>
+    
+                            <li><input style="width: 90%;padding: 5px 10px; background-color: transparent; border: 1px solid #afafaf;margin-bottom: 10px; font-size: 12px;" type="email" id="email" name="email" placeholder="Nhập email của bạn"></li>
+    
+                            <li>
+                                <div class="payment-accept">
+                                    <div>
+                                        <a target="_blank" href="#1"><img src="/img/payment-16b01.png" alt="payment"></a>
+                                        <a target="_blank" href="#2"><img src="/img/payment-26b01.png" alt="payment"></a>
+                                        <a target="_blank" href="#3"><img src="/img/payment-36b01.png" alt="payment"></a>
+                                        <a target="_blank" href="#4"><img src="/img/payment-46b01.png" alt="payment"></a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h2 class="h2_footer">Liên hệ với chúng tôi</h2>
+                        <span class="sp_footer"></span>
+                        <div class="contacts-info">
+                            <address><i class="fa-solid fa-location-dot" style="color: #777;"></i> &nbsp;Địa chỉ:
+                                Tầng 4 - Tòa nhà Hanoi Group - 442 Đội Cấn - Ba Đình - Hà Nội
+                            </address>
+                            <div class="phone-footer"><i class="fa-solid fa-phone" style="color: #777;"></i>
+                                &nbsp; Điện thoại:  (84-4) 66558868 
+                            </div> 
+                            <div class="phone-footer"><i style="color:#777" class="fa fa-archive"></i> &nbsp; Fax : (84-4) 66558868 
+                            </div>
+                            <div class="email-footer"><i class="fa-solid fa-envelope" style="color: #777;"></i>
+                                &nbsp;<a href=" Email: info@dkt.com.vn"> Email: info@dkt.com.vn</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-xs-12 coppyright">
+                           <a>© Copyright 2008-2015 DKT Technology JSC</a>
+                        </div>
+                        <div class="col-sm-7 col-xs-12 company-links hidden-xs" style="text-align: right;">
+                            <a href="index.html"><img src="/img/icon_visa6b01.png" alt="thanh-toan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <div id="popup-cart" class="modal fade" style="display: none; padding-right: 15px;">
+            <div id="popup-cart-desktop" class="clearfix">
+                <div class="title-popup-cart">
+                    <span class="your_product">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        Sản phẩm đã được thêm vào giỏ hàng
+                    </span> 
+                </div>
+                <div class="wrap_popup">
+                    <div class="title-quantity-popup">
+                        <span>Giỏ hàng của bạn</span>
+                    </div>
+                    <div class="content-popup-cart">
+                        <div class="thead-popup">
+                            <div style="width: 20%;" class="text-center">Ảnh sản phẩm</div>
+                            <div style="width: 30%;" class="text-center">Tên sản phẩm</div>
+                            <div style="width: 15%;" class="text-center">Đơn giá</div>
+                            <div style="width: 14%;" class="text-center">Số lượng</div>
+                            <div style="width: 14%;" class="text-center">Thành tiền</div>
+                            <div style="width: 6%;" class="text-center">Xóa</div>
+                        </div>
+                        <div class="tbody-popup scrollbar-dynamic">
+                            <div class="item-popup">
+                                <div style="width: 20%;" class="border height image_ text-left">
+                                    <div class="item-image">
+                                        <a class="product-image" href="/img/5010_website_profile_1.png" title="Xe đạp PTB">
+                                            <img alt="Xe đạp PTB" src="/img/5010_website_profile_1.png" width="90">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div style="width:30%;" class="height text-center fix_info">
+                                    <div class="item-info">
+                                        <p class="item-name">
+                                            <a class="text3line textlinefix" href="/img/5010_website_profile_1.png" title="Xe đạp PTB">Xe đạp PTB</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style="width: 15%;" class="border height text-center">
+                                    <div class="cart-price">
+                                        <span class="price">489.000₫</span>
+                                    </div>
+                                </div>
+                                <div style="width: 14%;" class="border height text-center">
+                                    <div class="qty_h check_">
+                                        <div style="height: 25px; width: 25px; border: 1px solid #777;">1</div>
+                                    </div>
+                                </div>
+                                <div style="width: 14%;" class="border height text-center">
+                                    <span class="cart-price"> 
+                                        <span class="price">1.467.000₫</span>
+                                    </span>
+                                </div>
+                                <div style="width: 7%;" class="border height text-center">
+                                    <div class="action">
+                                        <a class="remove-item" href="#">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="tfoot-popup">
+                            <div class="tfoot-popup-1 a-right clearfix">
+                                <div class="pull-left to-cart">
+                                    <p><a href="" title="Tới giỏ hàng">Tới giỏ hàng <i class="fa fa-angle-right"></i></a></p>
+                                </div>
+                                <span class="total-p popup-total">Tổng tiền thanh toán:<span class="cart-price" style="margin-left: 60px;">1.467.000₫</span></span>
+                            </div>
+                            <div class="tfoot-popup-2 clearfix">
+                                <a class="button buy_ btn-proceed-checkout" title="Tiến hành thanh toán" href=""><span>Tiến hành thanh toán</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="Close" class="close-window cart-close">
+                        <i class="fa  fa-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="quick-view-product" class="quickview-product" style="padding-right: 17px; display: none;">
+            <div class="quick-view-product">
+                <div class="block-quickview primary_block row">
+                    <div class="product-left-column col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                        <div class="clearfix image-block">
+                            <span class="view_full_size">
+                                <a class="img-product" title="" href="#">
+                                    <img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="./img/bronson_website_profile_1.png" alt="quickview">
+                                </a>
+                            </span>
+                            <div class="loading-imgquickview" style="display:none;"></div>
+                        </div>
+                        <div class="more-view-wrapper clearfix">
+                            <div class="" id="thumbs_list_quickview">
+                                <ul class="" id="thumblist_quickview" style="transform: translate3d(0px, 0px, 0px); display: inline-flex;">
+                                    <li class="swiper-slide" style="width: auto; margin-right: 10px;">
+                                        <a>
+                                            <img src="/img/bronson_website_profile_1.png" alt="undefined" style="max-width:120px; max-height:120px;">
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide" style="width: auto; margin-right: 10px;">
+                                        <a>
+                                            <img src="/img/bronson_website_profile_1.png" alt="undefined" style="max-width:120px; max-height:120px;">
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide" style="width: auto; margin-right: 10px;">
+                                        <a>
+                                            <img src="/img/bronson_website_profile_1.png" alt="undefined" style="max-width:120px; max-height:120px;">
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide" style="width: auto; margin-right: 10px;">
+                                        <a>
+                                            <img src="/img/bronson_website_profile_1.png" alt="undefined" style="max-width:120px; max-height:120px;">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-center-column product-info product-item col-xs-5 col-sm-7 col-md-7 col-lg-7" id="product-1195911">
+                        <div class="head-qv">
+                            <h3 class="qwp-name"><a class="text2line" href="" title="Xe đạp PTB">Xe đạp PTB</a></h3>
+                            <div class="vend-qv">
+                                <div class="top_sku">
+                                    Mã sản phẩm:
+                                    <span class="sku_">Đang cập nhật</span>
+                                </div>
+                                <div class="left_vend">
+                                    <span class="vendor_"><span>Thương hiệu: </span>AB Slider</span>	
+                                    <span class="line">|</span>
+                                    <span class="type">
+                                    <span>Loại: </span>Xe đạp</span>
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="quickview-info">
+                            <span class="prices">
+                                <span class="price sale-price">489.000₫</span>
+                                <del class="old-price">500.000₫</del>
+                            </span>
+                        </div>
+                        <div style="border-top: 1px solid #eaebf3;"><p style="text-align: justify;">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh</p></p></div>
+                        <div class="form-color">
+                            <form action="" method="post"  class="quick_option variants form-ajaxtocart" style="width: 40%;">
+                                <div class="quantity_wanted_p">
+                                    <span class="soluong_h">Số lượng</span>
+                                    <div class="input_qty_qv">
+                                        <a class="btn_num num_1 button button_qty">-</a>
+                                        <input type="text" id="quantity-detail" maxlength="3" name="quantity" value="1" class="form-control prd_quantity">
+                                        <a class="btn_num num_2 button button_qty">+</a>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="color" style="width: 60%;">
+                                <span class="color_h">Màu sắc</span>
+                                <div class="color-area">
+                                    <div style="height: 32px; width: 32px;margin: 5px; background-color: aquamarine;"></div>
+                                    <div style="height: 32px; width: 32px;margin: 5px; background-color: blue;"></div>
+                                    <div style="height: 32px; width: 32px;margin: 5px; background-color: red;"></div>
+                                    <div style="height: 32px; width: 32px;margin: 5px; background-color: black;"></div>
+                                    <div style="height: 32px; width: 32px;margin: 5px; background-color: pink;"></div>
+                                    <div style="height: 32px; width: 32px;margin: 5px; background-color: plum;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_actions clearfix">
+                            <button type="submit" class="btn btn_base">
+                                <span class="text_1" style="color: #000;">Mua ngay</span>
+                            </button>									
+                        </div>
+                    </div>
+                </div>
+                <a title="Close" class="quickview-close close-window" ><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/slider.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hienModalElements = document.querySelectorAll('.hienmodal');
+    
+            hienModalElements.forEach(function (element) {
+                element.addEventListener('click', function (event) {
+                    event.preventDefault(); // Ngăn chặn hành vi mặc định của phần tử khi được nhấn (ví dụ: ngăn chặn link đi đến href)
+                    
+                    const popupCart = document.getElementById('popup-cart');
+                    popupCart.classList.add('in'); // Thêm class 'in' để hiển thị modal
+    
+                    // Thay đổi thuộc tính style để hiển thị modal
+                    popupCart.style.display = 'block';
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const closeButtonQV = document.querySelector('.quickview-close');
+
+            closeButtonQV.addEventListener('click', function (event) {
+                event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+
+                const popupCart = document.getElementById('quick-view-product');
+                // Thực hiện các thay đổi bạn muốn ở đây, ví dụ:
+                popupCart.classList.remove('in');
+                popupCart.style.display = 'none';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const closeButton = document.querySelector('.cart-close');
+
+            closeButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+
+                const popupCart = document.getElementById('popup-cart');
+                // Thực hiện các thay đổi bạn muốn ở đây, ví dụ:
+                popupCart.classList.remove('in');
+                popupCart.style.display = 'none';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const hienQuickviewElements = document.querySelectorAll('.hienquickview');
+    
+            hienQuickviewElements.forEach(function (element) {
+                element.addEventListener('click', function (event) {
+                    event.preventDefault(); // Ngăn chặn hành vi mặc định của phần tử khi được nhấn (ví dụ: ngăn chặn link đi đến href)
+                    
+                    const popupCart = document.getElementById('quick-view-product');
+                    popupCart.classList.add('in'); // Thêm class 'in' để hiển thị modal
+    
+                    // Thay đổi thuộc tính style để hiển thị modal
+                    popupCart.style.display = 'block';
+                });
+            });
+        });
+        var dropdownToggle = document.querySelector('.dropdown-toggle');
+        var topCartContent = document.querySelector('.top-cart-content');
+
+        dropdownToggle.addEventListener('mouseleave', function() {
+        topCartContent.style.display = 'none';
+        });
+        dropdownToggle.addEventListener('mouseover', function() {
+        topCartContent.style.display = 'block';
+        });
+        topCartContent.addEventListener('mouseover', function() {
+        topCartContent.style.display = 'block';
+        });
+        topCartContent.addEventListener('mouseleave', function() {
+        topCartContent.style.display = 'none';
+        });
+
+
+    </script>
+    
+    
+</body>
+</html>

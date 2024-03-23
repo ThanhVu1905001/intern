@@ -1,0 +1,25 @@
+/* pagination.css */
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #eaeaea;
+  }
+ul:last-child{
+    display: flex;
+}
